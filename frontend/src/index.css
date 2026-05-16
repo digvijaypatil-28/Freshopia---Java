@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  
+  --color-fresh-mint: #00b894;
+  --color-fresh-dark: #009677;
+  --color-saffron-warm: #e67e22;
+  --color-saffron-light: #fab1a0;
+  --color-canvas: #fafafa;
+  --color-surface: #ffffff;
+  
+  --radius-fresh: 2rem;
+  --radius-card: 1.5rem;
+  
+  --shadow-premium: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 20px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-canvas text-slate-900 antialiased;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20;
+  }
+  
+  .bento-grid {
+    @apply grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5;
+  }
+  
+  .btn-primary {
+    @apply bg-fresh-mint text-white font-bold px-6 py-3 rounded-2xl shadow-lg shadow-fresh-mint/20 hover:scale-[1.02] active:scale-[0.98] transition-all;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-2xl text-slate-500 font-semibold transition-all hover:bg-fresh-mint/5 hover:text-fresh-mint;
+  }
+
+  .nav-item-active {
+    @apply bg-fresh-mint text-white shadow-lg shadow-fresh-mint/10 hover:bg-fresh-mint hover:text-white;
+  }
+}
+
+/* Custom Utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::selection {
+  @apply bg-fresh-mint/20 text-fresh-mint;
+}

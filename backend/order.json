@@ -1,0 +1,6 @@
+{
+  "items": [{"product_id":"fv-1","quantity":2}],
+  "total": 1052.9,
+  "address": "123 Fresh St, Mumbai",
+  "payment_method": "UPI"
+}
