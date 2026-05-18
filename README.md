@@ -105,7 +105,7 @@ For testing purposes, the application is seeded with the following accounts:
 
 ## 👨‍💻 Author
 **Digvijay Patil**  
-*Senior Full-Stack Engineer*
+*Full-Stack Engineer*
 
 ---
 *Built with ❤️ for the Indian Grocery Ecosystem.*
